@@ -339,6 +339,7 @@ class Repairer {
       counter++;
     }
     delete iter;
+    table_cache_->Evict(t.meta.number);
 
     ArchiveFile(src);
     if (counter == 0) {
